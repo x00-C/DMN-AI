@@ -1,4 +1,4 @@
-DMN AI: Local-First Cognitive Scribe & Multimodal Biometric Platform
+#### DMN AI: Local-First Cognitive Scribe & Multimodal Biometric Platform
 
 **Author:** Solo Systems Architect
 **Track:** Stanford x DeepMind Hackathon — Online Submission  
@@ -6,7 +6,7 @@ DMN AI: Local-First Cognitive Scribe & Multimodal Biometric Platform
 
 ---
 
-Executive Summary
+#### Executive Summary
 
 Modern AI medical scribes introduce catastrophic regulatory liabilities and possess a critical systemic flaw: they operate solely on verbal semantics, ignoring non-verbal physical telemetry. In complex neurobehavioral evaluations (e.g., ADHD executive dysfunction, generalized anxiety autonomic over-activation), spoken words represent less than half of the diagnostic picture. Essential clinical data lives within physical biometrics—such as micro-oscillations in hand movements, sudden postural realignment frequencies, and oculomotor fixation anomalies.
 
@@ -14,7 +14,7 @@ Modern AI medical scribes introduce catastrophic regulatory liabilities and poss
 
 ---
 
-System Architecture Topology
+#### System Architecture Topology
 
 
 ```
@@ -50,7 +50,7 @@ System Architecture Topology
 
 ---
 
-Protocol Specification & System Implementation
+#### Protocol Specification & System Implementation
 
 - **Edge Isolation & RAM-Confined Tokenization:** Live frame capture is processed as transient, non-serialized numerical matrices via OpenCV. MediaPipe pipeline algorithms track 21 discrete coordinate points per hand and a dense 468-point facial mesh. Raw pixel data is immediately purged from volatile memory at the frame-step boundary; it is never mapped to block storage, cached to local swap files, or exposed to network sockets.
 - **Localized Vector Vaulting (ChromaDB):** Anonymized 3D spatial coordinate deltas and speech-to-text tokens are structured as embedding vectors. These matrices are committed to a local, embedded instance of ChromaDB running on the workstation file system. This builds a persistent, air-gapped clinical context vault indexed entirely by randomized, non-PII patient UUIDs.
@@ -61,8 +61,7 @@ Protocol Specification & System Implementation
 - **Deterministic Runtime Fallback Gate:** To safeguard the presentation against remote API failures or free-tier rate limitations (`429 RESOURCE_EXHAUSTED`), the architecture includes an automated exception handling layer. If a quota block or network interruption occurs, a local parser immediately routes the active patient's specific parameters to a high-fidelity local matrix fallback. This guarantees instant, authentic clinical outputs on the frontend under any network condition.
 
 ---
-
-Investor & Institutional Value Proposition
+#### Investor & Institutional Value Proposition
 
 - **Zero-Trust Data Sovereignty:** By ensuring that no raw video, audio, or protected health information ever leaves the physical edge workstation, DMN AI bypasses the complex HIPAA/GDPR data-sharing regulations that stall standard cloud-dependent medical apps.
 - **Closing the Diagnostic Loop:** DMN AI catches the missing 50% of patient interactions. It equips physicians with an objective biometric audit trail that bridges the gap between what a patient verbally reports and how their autonomic nervous system physically reacts.

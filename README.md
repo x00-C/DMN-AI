@@ -1,13 +1,15 @@
-DMN AI (Default Mode Network Artificial Intelligence)
+#### DMN AI (Default Mode Network Artificial Intelligence)
 
 A local-first, multi-modal medical assistant and next-generation clinical scribe. DMN AI captures unstructured clinical conversations alongside objective, physical biometric telemetry vectors (processed completely on the edge in volatile RAM) to uncover diagnostic insights that voice-only scribes miss.
 
-Key Features
+---
+#### Key Features
 
 - **Local-First Privacy Architecture:** Isolates raw audio and video streams inside local volatile registers. All raw health data is destroyed at the frame-step boundary; only mathematical vector metadata is cached in the local vault.
 - **Dual-Channel Clinical Auditing:** Uses Google Gemini (`gemini-2.5-pro`) to cross-examine verbal transcripts side-by-side with localized 3D spatial movement indices.
 - **Automated Insurance Coding:** Instantly maps clinical findings to standardized billing matrices, generating corresponding ICD-10 diagnostic classifications and CPT evaluation codes.
 - **On-Demand Custom Conversions:** Features an interactive query terminal to dynamically transform underlying session contexts into customized care plans, referral notes, or multilingual summaries.
+
 ---
 #### Repository Layout
 
@@ -28,7 +30,6 @@ C:\labs\DMN-AI\
 └── app.py                    # Dual-panel user interface presentation engine
 ```
 
-Use code with caution.
 
 Prerequisites & Installation
 
@@ -60,8 +61,8 @@ text
 
    `GEMINI_API_KEY=your_actual_google_ai_studio_api_key_here`
 
-
-Getting Started
+---
+#### Getting Started
 
 To launch the local clinical database and interface surface, run the following script:
 
@@ -92,7 +93,7 @@ Click **Analyze** in the left panel to compile the medical SOAP notes, biometric
 
 ---
 
-Operational Resilience
+#### Operational Resilience
 
 This system includes an integrated logical parser fallback routine to handle remote server rate limitations or account testing blocks (`429 RESOURCE_EXHAUSTED`). If network communication interruptions occur, the UI layer automatically routes data requests to secure local heuristic fallbacks, ensuring seamless, zero-downtime presentations during evaluations.
 
