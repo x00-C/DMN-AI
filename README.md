@@ -3,7 +3,9 @@
 A local-first, multi-modal medical assistant and next-generation clinical scribe. DMN AI captures unstructured clinical conversations alongside objective, physical biometric telemetry vectors (processed completely on the edge in volatile RAM) to uncover diagnostic insights that voice-only scribes miss.
 
 ---
-### System Demonstration <p align="center"> <img src="assets/DMN AI - UI 1.png" width="32%" alt="DMN AI - UI 1" /> <img src="assets/DMN AI - UI 2.png" width="32%" alt="DMN AI - UI 2" /> <img src="assets/DMN AI - UI 3.png" width="32%" alt="DMN AI - UI 3" /> </p>
+#### System Demonstration
+
+<p align="center"> <img src="assets/DMN AI - UI 1.png" width="32%" alt="Biometrics Analysis View" /> <img src="assets/DMN AI - UI 2.png" width="32%" alt="Create Anything Context View" /> <img src="assets/DMN AI - UI 3.png" width="32%" alt="Care Plan Blueprint View" /> </p>
 #### UI Images
 * **Biometrics (Left)** – Pressing Analyze creates a full biometric analysis from all visual and conversational data. The system writes medical SOAP notes and generates medical ICD-10 and CPT codes for insurance metadata. 
 * **Create Anything (Center)** – Pressing Create allows creation of whatever the user needs including custom cross-examination prompts directly over the local vector database (e.g., dynamic multi-language translation requests). 
@@ -25,20 +27,26 @@ A local-first, multi-modal medical assistant and next-generation clinical scribe
 C:\labs\DMN-AI\
 │
 ├── assets/
-│   └── caduceus.png          # Medical iconography branding asset
+│   ├── caduceus.png        # Medical iconography branding asset
+│   ├── DMN AI - UI 1.png   # Biometrics Analysis Dashboard
+│   ├── DMN AI - UI 2.png   # Multi-Language Prompting Sandbox
+│   └── DMN AI - UI 3.png   # Clinical Care Planner Blueprint
 │
 ├── core/
-│   ├── __init__.py           # Package namespace declaration
-│   ├── pipeline.py           # Edge vision telemetry rendering matrix
-│   └── database.py           # Local data profile routing index
+│   ├── __init__.py         # Package namespace declaration
+│   ├── database.py         # Local data profile routing index
+│   └── pipeline.py         # Edge vision telemetry rendering matrix
 │
-├── .env                      # Local environment secrets (Git ignored)
-├── requirements.txt          # Python package dependency manifest
-└── app.py                    # Dual-panel user interface presentation engine
+├── .env                    # Local environment secrets (Git ignored)
+├── .gitignore              # Repository exclusion rules manifest
+├── app.py                  # Dual-panel user interface presentation engine
+├── README.md               # Main repository documentation & guide
+├── requirements.txt        # Python package dependency manifest
+└── SUMMARY.md              # Project architecture abstract manifest
 ```
 
-
-Prerequisites & Installation
+---
+#### Prerequisites & Installation
 
 To deploy this local system from scratch, you must have **Python 3.11** installed on your workstation. The total environmental footprint of this project is approximately **1.35 GB**.
 
@@ -79,7 +87,7 @@ bash
 
 ---
 
-Simulating Patient Scenarios
+#### Simulating Patient Scenarios
 
 Once the dashboard opens in your browser, use the left-hand navigation pane to cycle between multi-patient database models:
 
@@ -89,7 +97,7 @@ Once the dashboard opens in your browser, use the left-hand navigation pane to c
 Click **Analyze** in the left panel to compile the medical SOAP notes, biometric analysis checklists, and administrative billing codes. Type custom directives into the right panel (such as _"Create a summary in Spanish"_) and click **Create** to execute custom clinical transformations.
 
 ---
-### AI Medical Assistant - Input Suggestions
+#### AI Medical Assistant - Input Suggestions
 
 - **Create a summary in Spanish** (Generates a translated medical summary for families)
 - **Create a summary in English** (Generates a clean clinical summary layout)
@@ -105,7 +113,7 @@ Click **Analyze** in the left panel to compile the medical SOAP notes, biometric
 This system includes an integrated logical parser fallback routine to handle remote server rate limitations or account testing blocks (`429 RESOURCE_EXHAUSTED`). If network communication interruptions occur, the UI layer automatically routes data requests to secure local heuristic fallbacks, ensuring seamless, zero-downtime presentations during evaluations.
 
 ---
-### Architectural Design
+#### Architectural Design
 
 As a solo systems architect, my design pattern for **DMN AI** balances the line between intense local data sovereignty requirements (HIPAA compliance, patient privacy) and cloud-scale semantic reasoning. The core value proposition to investors is simple: **We are eliminating the single biggest blind spot in modern medical scribes—non-verbal behavioral analytics.** Traditional digital scribes listen to what a patient says, but they miss objective physical metrics. During a neurobehavioral assessment, an experienced physician looks for structural anomalies like micro-oscillations in hand gestures, rapid postural shifting, or shallow respiratory cycles.
 
