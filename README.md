@@ -1,6 +1,13 @@
-#### DMN AI (Default Mode Network Artificial Intelligence)
+### DMN AI (Default Mode Network Artificial Intelligence)
 
 A local-first, multi-modal medical assistant and next-generation clinical scribe. DMN AI captures unstructured clinical conversations alongside objective, physical biometric telemetry vectors (processed completely on the edge in volatile RAM) to uncover diagnostic insights that voice-only scribes miss.
+
+---
+### System Demonstration <p align="center"> <img src="assets/DMN AI - UI 1.png" width="32%" alt="DMN AI - UI 1" /> <img src="assets/DMN AI - UI 2.png" width="32%" alt="DMN AI - UI 2" /> <img src="assets/DMN AI - UI 3.png" width="32%" alt="DMN AI - UI 3" /> </p>
+#### UI Images
+* **Biometrics (Left)** – Pressing Analyze creates a full biometric analysis from all visual and conversational data. The system writes medical SOAP notes and generates medical ICD-10 and CPT codes for insurance metadata. 
+* **Create Anything (Center)** – Pressing Create allows creation of whatever the user needs including custom cross-examination prompts directly over the local vector database (e.g., dynamic multi-language translation requests). 
+* **Creating a Care Plan (Right)** – Using the Create Anything feature a care plan can be created that will correlate to the biometric analysis.
 
 ---
 #### Key Features
