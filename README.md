@@ -13,7 +13,6 @@ A local-first, multi-modal medical assistant and next-generation clinical scribe
 </p>
 
 
-#### UI Images
 * **Biometrics (Left)** – Pressing Analyze creates a full biometric analysis from all visual and conversational data. The system writes medical SOAP notes and generates medical ICD-10 and CPT codes for insurance metadata. 
 * **Create Anything (Center)** – Pressing Create allows creation of whatever the user needs including custom cross-examination prompts directly over the local vector database (e.g., dynamic multi-language translation requests). 
 * **Creating a Care Plan (Right)** – Using the Create Anything feature a care plan can be created that will correlate to the biometric analysis.
