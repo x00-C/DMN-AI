@@ -5,7 +5,14 @@ A local-first, multi-modal medical assistant and next-generation clinical scribe
 ---
 #### System Demonstration
 
-<p align="center"> <img src="assets/DMN AI - UI 1.png" width="32%" alt="Biometrics Analysis View" /> <img src="assets/DMN AI - UI 2.png" width="32%" alt="Create Anything Context View" /> <img src="assets/DMN AI - UI 3.png" width="32%" alt="Care Plan Blueprint View" /> </p>
+
+<p align="center">
+  <img src="assets/DMN AI - UI 1.png" width="32%" />
+  <img src="assets/DMN AI - UI 2.png" width="32%" />
+  <img src="assets/DMN AI - UI 3.png" width="32%" />
+</p>
+
+
 #### UI Images
 * **Biometrics (Left)** – Pressing Analyze creates a full biometric analysis from all visual and conversational data. The system writes medical SOAP notes and generates medical ICD-10 and CPT codes for insurance metadata. 
 * **Create Anything (Center)** – Pressing Create allows creation of whatever the user needs including custom cross-examination prompts directly over the local vector database (e.g., dynamic multi-language translation requests). 
