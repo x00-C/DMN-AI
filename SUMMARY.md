@@ -33,7 +33,7 @@ Modern AI medical scribes introduce catastrophic regulatory liabilities and poss
                                       │     └───────────┬─────────────┘
                                       │                 │
 ──────────────────────────────────────┴─────────────────┼──────────────────────────
-                                                        │ Out-of-Band Context                                                                Payload
+                                                        │ Out-of-Band Context      
                                                         │ (No Raw Video/Audio/PII)
                                             ┌───────────▼─────────────┐
                                             │ Secure Google Gemini API│
@@ -43,8 +43,8 @@ Modern AI medical scribes introduce catastrophic regulatory liabilities and poss
                               ┌─────────────────────────┼─────────────────────────┐
                               │                         │                         │
                   ┌───────────▼───────────┐ ┌───────────▼───────────┐┌────────────▼
-                  │ Medical SOAP Notes    │ │ Biometric Analysis    ││ Medical                                                                            (ICD-10)
-                  │ (Subjective/Objective)│ │ (Discrepancy Audits)  ││ (CPT Code)  
+                  │ Medical SOAP Notes    │ │ Biometric Analysis    ││Medical Code 
+                  │ (Subjective/Objective)│ │ (Discrepancy Audits)  ││(CPT/ICD10)  
                   └───────────────────────┘ └───────────────────────┘└─────────────
 ```
 
