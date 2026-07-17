@@ -40,12 +40,12 @@ Modern AI medical scribes introduce catastrophic regulatory liabilities and poss
                                             │     (gemini-2.5-pro)    │
                                             └───────────┬─────────────┘
                                                         │
-                              ┌─────────────────────────┼─────────────────────────┐
-                              │                         │                         │
-                  ┌───────────▼───────────┐ ┌───────────▼───────────┐┌────────────▼
-                  │ Medical SOAP Notes    │ │ Biometric Analysis    ││Medical Code 
-                  │ (Subjective/Objective)│ │ (Discrepancy Audits)  ││(CPT/ICD10)  
-                  └───────────────────────┘ └───────────────────────┘└─────────────
+                ┌─────────────────────────┬─────────────┴───────────┐
+                │                         │                         │
+    ┌───────────▼───────────┐ ┌───────────▼───────────┐┌────────────▼───┐
+    │ Medical SOAP Notes    │ │ Biometric Analysis    ││ Medical Code   │
+    │ (Subjective/Objective)│ │ (Discrepancy Audits)  ││ (CPT/ICD10)    │
+    └───────────────────────┘ └───────────────────────┘└────────────────┘
 ```
 
 ---
