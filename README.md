@@ -97,7 +97,7 @@ streamlit run app.py
 The live production application utilizes a decoupled serverless container framework deployed directly onto Google Cloud Run.
 
 - **Live Demo URL:** 
-  `[https://run.app](https://dmn-ai-app-674941016267.us-central1.run.app/)`
+https://dmn-ai-app-674941016267.us-central1.run.app/
 
 Serverless Deployment Command Workflow
 
