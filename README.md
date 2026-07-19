@@ -127,6 +127,30 @@ gcloud run deploy dmn-ai-app --image gcr.io/gen-lang-client-0261345601/dmn-ai-ap
 ```
 
 ---
+#### Systems Engineering & DevOps
+To ensure cross-platform consistency and zero-downtime scalability, the production environment is fully containerized and deployed to Google Cloud Run as an isolated serverless microservice.
+
+* **Infrastructure Architecture:** Serverless Containerized Deployment
+* **Container Core Base Image:** `python:3.11-slim` (Debian Linux Runtime)
+* **Secret Isolation Model:** Decoupled Runtime Environment Variable Injection (`--set-env-vars`)
+* **Graphics Dependency Resolution:** Embedded OS-level `apt-get` patching for `libgl1` and `libglib2.0-0` layers
+
+##### Orchestration & Cloud Engineering
+```powershell
+# 1. Authorize session script execution boundaries
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
+
+# 2. Enforce explicit UTF-8 ignore matrices to isolate binary database weight artifacts
+[System.IO.File]::WriteAllLines("$pwd\.gcloudignore", @('.git/', 'node_modules/', 'venv/', '__pycache__/', 'chroma/', 'assets/', '*.png', '*.jpg', '*.jpeg', '*.db', '.env'))
+
+# 3. Stream source modules to Google Cloud Build for container image compilation
+gcloud builds submit --tag gcr.io/gen-lang-client-0261345601/dmn-ai-app .
+
+# 4. Initialize image on Cloud Run with zero-cache environment variables enforced
+gcloud run deploy dmn-ai-app --image gcr.io/gen-lang-client-0261345601/dmn-ai-app --allow-unauthenticated --region us-central1 --set-env-vars GEMINI_API_KEY="SECURE_VARIABLE_STRING"
+```
+
+---
 #### AI Medical Assistant - Input Suggestions
 
 - **Create a summary in Spanish** (Generates a translated medical summary for families)
