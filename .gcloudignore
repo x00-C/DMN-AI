@@ -1,0 +1,9 @@
+assets/
+chroma/
+__pycache__/
+*.png
+*.jpg
+*.jpeg
+*.db
+.git/
+.env

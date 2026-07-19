@@ -54,53 +54,77 @@ C:\labs\DMN-AI\
 ---
 #### Prerequisites & Installation
 
-To deploy this local system from scratch, you must have **Python 3.11** installed on your workstation. The total environmental footprint of this project is approximately **1.35 GB**.
+To deploy this system from scratch or connect to the cloud environment, you must have **Python 3.11** installed on your workstation. The total environmental footprint of this project is approximately **1.35 GB**.
 
 - **`Python 3.11`**: The base computing environment (~500 MB).
 - **`google-genai`**: Official modern Google AI Studio SDK framework (~50 MB).
 - **`streamlit`**: High-fidelity reactive presentation layer (~100 MB).
-- **`opencv-python`**: Mathematical video stream capture matrix framework (~90 MB).
+- **`opencv-python-headless`**: Server-optimized video capture matrix framework (~90 MB).
 - **`mediapipe`**: Open-source 3D structural landmark coordinate engine (~150 MB).
 - **`chromadb`**: Local-first vector storage vault instance (~450 MB).
 - **`python-dotenv`**: Volatile configuration and API key isolate (~10 MB).
 
 1. Clone or download this repository to your machine:
 
-   ```
-   cd C:\labs\DMN-AI
-   ```
+```
+cd C:\labs\DMN-AI
+```
 
 2. Download and install all required framework modules using pip:
 
-bash
-
- ``pip install -r requirements.txt``
-
+```bash
+pip install -r requirements.txt
+```
 
 3. Create a `.env` file in the root project directory to manage your out-of-band security token:
-text
 
-   `GEMINI_API_KEY=your_actual_google_ai_studio_api_key_here`
+```
+GEMINI_API_KEY=your_actual_google_ai_studio_api_key_here
+```
 
 ---
-#### Getting Started
+#### Getting Started (Local Development)
 
 To launch the local clinical database and interface surface, run the following script:
 
-bash
-
- ``streamlit run app.py``
+```bash
+streamlit run app.py
+```
 
 ---
+#### Cloud Production Infrastructure (Google Cloud Run)
 
-#### Simulating Patient Scenarios
+The live production application utilizes a decoupled serverless container framework deployed directly onto Google Cloud Run.
 
-Once the dashboard opens in your browser, use the left-hand navigation pane to cycle between multi-patient database models:
+- **Live Demo URL:** 
+  `[https://run.app](https://dmn-ai-app-674941016267.us-central1.run.app/)`
 
-- **Patient 1 (ADHD):** Simulates high-amplitude hand coordinate shifts, postural alignment anomalies, and tracking breaks synchronized with conversational focus issues.
-- **Patient 2 (Anxiety):** Simulates micro-oscillations along thoracic markers (shallow respiration), high-frequency manual tremors, and muscle tension profiles paired with severe cognitive rumination.
+Serverless Deployment Command Workflow
 
-Click **Analyze** in the left panel to compile the medical SOAP notes, biometric analysis checklists, and administrative billing codes. Type custom directives into the right panel (such as _"Create a summary in Spanish"_) and click **Create** to execute custom clinical transformations.
+1. Elevate local session script execution policies inside PowerShell:
+
+```powershell
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
+```
+
+
+2. Build an explicit, clean UTF-8 text encoding manifest to block local cache syncing crashes:
+
+```powershell
+[System.IO.File]::WriteAllLines("$pwd\.gcloudignore", @('.git/', 'node_modules/', 'venv/', '__pycache__/', 'chroma/', 'assets/', '*.png', '*.jpg', '*.jpeg', '*.db', '.env'))
+```
+
+3. Submit the source code to Cloud Build to automatically compile dependencies and system graphics packages via the project `Dockerfile`:
+
+```powershell
+gcloud builds submit --tag gcr.io/gen-lang-client-0261345601/dmn-ai-app .
+```
+
+4. Initialize the immutable container image live on Cloud Run with environment secrets enforced:
+
+```powershell
+gcloud run deploy dmn-ai-app --image gcr.io/gen-lang-client-0261345601/dmn-ai-app --allow-unauthenticated --region us-central1 --set-env-vars GEMINI_API_KEY="YOUR_API_KEY_HERE"
+```
 
 ---
 #### AI Medical Assistant - Input Suggestions
