@@ -117,7 +117,7 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
 3. Submit the source code to Cloud Build to automatically compile dependencies and system graphics packages via the project `Dockerfile`:
 
 ```powershell
-gcloud builds submit --tag gcr.io/gen-lang-client-0261345601/dmn-ai-app .
+gcloud builds submit --tag gcr.io/gen-lang-client-0261345601/dmn-ai .
 ```
 
 4. Initialize the immutable container image live on Cloud Run with environment secrets enforced:
@@ -144,7 +144,7 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
 [System.IO.File]::WriteAllLines("$pwd\.gcloudignore", @('.git/', 'node_modules/', 'venv/', '__pycache__/', 'chroma/', 'assets/', '*.png', '*.jpg', '*.jpeg', '*.db', '.env'))
 
 # 3. Stream source modules to Google Cloud Build for container image compilation
-gcloud builds submit --tag gcr.io/gen-lang-client-0261345601/dmn-ai-app .
+gcloud builds submit --tag gcr.io/gen-lang-client-0261345601/dmn-ai .
 
 # 4. Initialize image on Cloud Run with zero-cache environment variables enforced
 gcloud run deploy dmn-ai --image gcr.io/gen-lang-client-0261345601/dmn-ai --allow-unauthenticated --region us-central1 --set-env-vars GEMINI_API_KEY="SECURE_VARIABLE_STRING"
