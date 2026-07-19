@@ -97,7 +97,7 @@ streamlit run app.py
 The live production application utilizes a decoupled serverless container framework deployed directly onto Google Cloud Run.
 
 - **Live Demo URL:** 
-https://dmn-ai-app-674941016267.us-central1.run.app/
+https://dmn-ai-674941016267.us-central1.run.app/
 
 Serverless Deployment Command Workflow
 
@@ -123,7 +123,7 @@ gcloud builds submit --tag gcr.io/gen-lang-client-0261345601/dmn-ai-app .
 4. Initialize the immutable container image live on Cloud Run with environment secrets enforced:
 
 ```powershell
-gcloud run deploy dmn-ai-app --image gcr.io/gen-lang-client-0261345601/dmn-ai-app --allow-unauthenticated --region us-central1 --set-env-vars GEMINI_API_KEY="YOUR_API_KEY_HERE"
+gcloud run deploy dmn-ai --image gcr.io/gen-lang-client-0261345601/dmn-ai --allow-unauthenticated --region us-central1 --set-env-vars GEMINI_API_KEY="YOUR_API_KEY_HERE"
 ```
 
 ---
@@ -147,7 +147,7 @@ Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope Process
 gcloud builds submit --tag gcr.io/gen-lang-client-0261345601/dmn-ai-app .
 
 # 4. Initialize image on Cloud Run with zero-cache environment variables enforced
-gcloud run deploy dmn-ai-app --image gcr.io/gen-lang-client-0261345601/dmn-ai-app --allow-unauthenticated --region us-central1 --set-env-vars GEMINI_API_KEY="SECURE_VARIABLE_STRING"
+gcloud run deploy dmn-ai --image gcr.io/gen-lang-client-0261345601/dmn-ai --allow-unauthenticated --region us-central1 --set-env-vars GEMINI_API_KEY="SECURE_VARIABLE_STRING"
 ```
 
 ---
