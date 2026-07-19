@@ -1,6 +1,6 @@
 google-genai
 streamlit
-opencv-python
+opencv-python-headless
 mediapipe
 chromadb
 python-dotenv
